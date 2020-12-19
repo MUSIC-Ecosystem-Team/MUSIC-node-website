@@ -42,23 +42,8 @@
                   </v-col>
 
                   <v-col class="text-right">
-                    <v-list-item-icon>
-                      <v-menu offset-x z-index="251" auto>
-                        <template #activator="{ on, attrs }">
-                          <v-btn icon v-bind="attrs" v-on="on">
-                            <v-icon>mdi-volume-high</v-icon>
-                          </v-btn>
-                        </template>
-                        <v-card height="189">
-                          <v-slider step="0.01" max="1" vertical />
-                        </v-card>
-                      </v-menu>
-                    </v-list-item-icon>
-                    <v-list-item-icon id="btnPlaylist" class="ml-0">
-                      <v-btn icon>
-                        <v-icon>mdi-playlist-music</v-icon>
-                      </v-btn>
-                    </v-list-item-icon>
+                    <VolumeBtn :value="0" />
+                    <QueueBtn />
                   </v-col>
                 </v-row>
               </v-list-item>
