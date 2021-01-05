@@ -3845,10 +3845,10 @@ eslint-plugin-nuxt@^2.0.0:
     semver "^7.3.2"
     vue-eslint-parser "^7.1.1"
 
-eslint-plugin-prettier@^3.1.4:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.3.0.tgz#61e295349a65688ffac0b7808ef0a8244bdd8d40"
-  integrity sha512-tMTwO8iUWlSRZIwS9k7/E4vrTsfvsrcM5p1eftyuqWH25nKsz/o6/54I7jwQ/3zobISyC7wMy9ZsFwgTxOcOpQ==
+eslint-plugin-prettier@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.3.1.tgz#7079cfa2497078905011e6f82e8dd8453d1371b7"
+  integrity sha512-Rq3jkcFY8RYeQLgk2cCwuc0P7SEFwDravPhsJZOQ5N4YI4DSg50NyqJ/9gdZHzQlHf8MvafSesbNJCcP/FF6pQ==
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
@@ -3880,15 +3880,6 @@ eslint-plugin-unicorn@^23.0.0:
     reserved-words "^0.1.2"
     safe-regex "^2.1.1"
     semver "^7.3.2"
-
-eslint-plugin-vue@^6.2.2:
-  version "6.2.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-6.2.2.tgz#27fecd9a3a24789b0f111ecdd540a9e56198e0fe"
-  integrity sha512-Nhc+oVAHm0uz/PkJAWscwIT4ijTrK5fqNqz9QB1D35SbbuMG1uB6Yr5AJpvPSWg+WOw7nYNswerYh0kOk64gqQ==
-  dependencies:
-    natural-compare "^1.4.0"
-    semver "^5.6.0"
-    vue-eslint-parser "^7.0.0"
 
 eslint-plugin-vue@^7.1.0:
   version "7.3.0"
@@ -8816,7 +8807,7 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.0.0.tgz#ddad8d675ee02c761a14229f0e440e219de1da1c"
   integrity sha512-arhk1wtWAfLsJyxGMoEYhoBowM87/i6HLSG2LH/03Yog6i2d9JEN1peMP0Ceis+/n9DxdenGYZZTxbPPJyHciA==
 
-vue-eslint-parser@^7.0.0, vue-eslint-parser@^7.1.1, vue-eslint-parser@^7.3.0:
+vue-eslint-parser@^7.1.1, vue-eslint-parser@^7.3.0:
   version "7.3.0"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-7.3.0.tgz#894085839d99d81296fa081d19643733f23d7559"
   integrity sha512-n5PJKZbyspD0+8LnaZgpEvNCrjQx1DyDHw8JdWwoxhhC+yRip4TAvSDpXGf9SWX6b0umeB5aR61gwUo6NVvFxw==
