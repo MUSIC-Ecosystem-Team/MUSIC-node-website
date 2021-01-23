@@ -3,7 +3,7 @@
     -<v-main>
       <v-container>
         <h1>Une erreur est survenue</h1>
-        <NuxtLink to="/"> Page d'accueil </NuxtLink>
+        <v-btn to="/"> Page d'accueil </v-btn>
       </v-container>
     </v-main>
   </v-app>

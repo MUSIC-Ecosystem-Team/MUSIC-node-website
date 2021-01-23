@@ -32,7 +32,17 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/imagemin',
   ],
+  imagemin: {
+    enableInDev: true,
+    plugins: [
+      ['gifsicle', { interlaced: true }],
+      ['jpegtran', { progressive: true }],
+      ['optipng', { optimizationLevel: 5 }],
+      ['svgo', { plugins: [{ removeViewBox: false }] }]
+    ]
+  },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
