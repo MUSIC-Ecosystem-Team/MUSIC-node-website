@@ -101,7 +101,7 @@ export default Vue.extend({
   },
   methods: {
     selectImage() {},
-    imageSelected(e: any) {},
+    imageSelected() {},
   },
 })
 </script>

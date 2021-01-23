@@ -40,8 +40,8 @@ export default {
       ['gifsicle', { interlaced: true }],
       ['jpegtran', { progressive: true }],
       ['optipng', { optimizationLevel: 5 }],
-      ['svgo', { plugins: [{ removeViewBox: false }] }]
-    ]
+      ['svgo', { plugins: [{ removeViewBox: false }] }],
+    ],
   },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
