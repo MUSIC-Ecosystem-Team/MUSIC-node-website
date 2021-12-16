@@ -1,10 +1,4 @@
 export default {
-  // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
-  ssr: false,
-
-  // Target (https://go.nuxtjs.dev/config-target)
-  target: 'static',
-
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: 'MUSIC!',
@@ -28,8 +22,6 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
   ],
@@ -47,6 +39,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
+      dark: false,
       themes: {
         dark: {
           primary: '#ff6b6b',

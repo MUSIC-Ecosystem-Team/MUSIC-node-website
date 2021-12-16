@@ -13,10 +13,8 @@
   </v-list-item-icon>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
+<script>
+export default {
   name: 'VolumeBtn',
   props: {
     value: {
@@ -30,12 +28,12 @@ export default Vue.extend({
     }
   },
   watch: {
-    value(val: number) {
+    value(val) {
       this.volume = val
     },
-    volume(val: number) {
+    volume(val) {
       console.log(val)
     },
   },
-})
+}
 </script>

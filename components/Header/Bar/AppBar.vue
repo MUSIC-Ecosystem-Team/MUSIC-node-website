@@ -9,8 +9,6 @@
         ? true
         : false
     "
-    color="white"
-    style="border-bottom: 1px solid black"
   >
     <v-app-bar-nav-icon
       @click="$emit('update:drawer-change-left', !drawerLeft)"
@@ -26,26 +24,27 @@
         <v-tab link nuxt to="/musics">GENRES</v-tab>
       </v-tabs>
       <v-spacer></v-spacer>
-      <v-btn text @click="play"
+      <v-btn text
         ><v-icon left>mdi-shuffle</v-icon> LIRE EN MODE ALÉATOIRE</v-btn
       >
     </template>
     <v-spacer></v-spacer>
-    <AutoCompleteSearch />
+    <auto-complete-search />
     <v-spacer></v-spacer>
     <v-btn icon @click="$emit('update:drawer-change-right', !drawerRight)">
       <v-icon> mdi-playlist-play </v-icon>
     </v-btn>
-    <MenuProfile />
+    <menu-profile />
   </v-app-bar>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
+import AutoCompleteSearch from './AutoCompleteSearch.vue'
+import MenuProfile from './MenuProfile.vue'
 
-export default Vue.extend({
+export default {
+  components: { AutoCompleteSearch, MenuProfile },
   name: 'AppBar',
-
   props: {
     drawerRight: {
       type: Boolean,
@@ -56,5 +55,5 @@ export default Vue.extend({
       required: true,
     },
   },
-})
+}
 </script>

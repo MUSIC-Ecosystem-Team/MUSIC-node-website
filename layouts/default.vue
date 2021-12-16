@@ -1,16 +1,16 @@
 <template>
   <v-app>
     <!-- Navbar -->
-    <AppBar
+    <app-bar
       :drawer-left="drawerLeft"
       :drawer-right="drawerRight"
       :drawer-change-left.sync="drawerLeft"
       :drawer-change-right.sync="drawerRight"
     />
     <!-- Drawer Left -->
-    <DrawerLeft :value="drawerLeft" :change-val.sync="drawerLeft" />
+    <drawer-left :value="drawerLeft" :change-val.sync="drawerLeft" />
     <!-- Drawer Right -->
-    <DrawerRight :value="drawerRight" :change-val.sync="drawerRight" />
+    <drawer-right :value="drawerRight" :change-val.sync="drawerRight" />
     <v-main>
       <nuxt keep-alive />
     </v-main>
@@ -18,17 +18,20 @@
   </v-app>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
+import AppBar from '~/components/Header/Bar/AppBar.vue'
+import DrawerLeft from '~/components/Header/DrawerLeft.vue'
+import DrawerRight from '~/components/Header/DrawerRight.vue'
 
-export default Vue.extend({
+export default {
+  components: { AppBar, DrawerLeft, DrawerRight },
   data() {
     return {
       drawerLeft: false,
       drawerRight: false,
     }
   },
-})
+}
 </script>
 
 <style>

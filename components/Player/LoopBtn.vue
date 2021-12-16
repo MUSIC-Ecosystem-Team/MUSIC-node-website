@@ -9,10 +9,8 @@
   </v-list-item-icon>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
+<script>
+export default {
   name: 'LoopBtn',
   props: {
     loop: {
@@ -20,7 +18,7 @@ export default Vue.extend({
       required: true,
     },
   },
-})
+}
 </script>
 
 <style></style>

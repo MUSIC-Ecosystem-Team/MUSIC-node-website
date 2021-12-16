@@ -36,12 +36,9 @@
   </v-navigation-drawer>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
+<script>
+export default {
   name: 'DrawerRight',
-
   props: {
     value: {
       type: Boolean,
@@ -62,15 +59,15 @@ export default Vue.extend({
     }
   },
   watch: {
-    value(val: boolean) {
+    value(val) {
       this.show = val
     },
   },
   methods: {
-    changeDrawer(val: boolean) {
+    changeDrawer(val) {
       this.show = val
       this.$emit('update:changeVal', val)
     },
   },
-})
+}
 </script>

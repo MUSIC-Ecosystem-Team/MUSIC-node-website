@@ -71,12 +71,6 @@
             </v-stepper-content>
 
             <v-stepper-content step="3">
-              <v-card
-                class="mb-12"
-                color="grey lighten-1"
-                height="200px"
-              ></v-card>
-
               <v-btn color="primary" @click="e1 = 1"> Continuer </v-btn>
 
               <v-btn text> Revenir en arrière </v-btn>
@@ -88,10 +82,8 @@
   </v-container>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
+<script>
+export default {
   layout: 'get-started',
   data() {
     return {
@@ -101,9 +93,11 @@ export default Vue.extend({
   },
   methods: {
     selectImage() {},
-    imageSelected() {},
+    imageSelected() {
+      console.log()
+    },
   },
-})
+}
 </script>
 
 <style scoped>

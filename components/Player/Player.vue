@@ -26,24 +26,40 @@
                 <v-row justify="center" align="center">
                   <v-col>
                     <v-list-item-content style="margin-left: 10px">
-                      <v-list-item-title>Ne joue pas</v-list-item-title>
-                      <v-list-item-subtitle>test</v-list-item-subtitle>
+                      <v-list-item-title
+                        class="titlePlayer"
+                        style="max-width: 150px"
+                        >Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Odio, blanditiis deleniti, tempora illo ratione,
+                        explicabo odit unde delectus iusto magnam soluta ea
+                        molestiae consequatur ipsam enim incidunt quis officiis
+                        tenetur!</v-list-item-title
+                      >
+                      <v-list-item-subtitle
+                        class="artistPlayer"
+                        style="max-width: 150px"
+                        >Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Fuga, error! Eligendi, officia pariatur. Iste modi
+                        ea in aliquid. Voluptas sequi non aliquid consequatur
+                        illo, illum veniam odit obcaecati alias
+                        inventore.</v-list-item-subtitle
+                      >
                     </v-list-item-content>
                   </v-col>
                   <v-col id="colControlPlayer" class="text-center">
-                    <LoopBtn :loop="false" />
-                    <PreviousBtn :has-previous="true" />
+                    <loop-btn :loop="false" />
+                    <previous-btn :has-previous="true" />
 
-                    <PlayPauseBtn :play="true" />
+                    <play-pause-btn :play="true" />
 
-                    <SkipBtn :has-next="true" />
+                    <skip-btn :has-next="true" />
 
-                    <ShuffleBtn :shuffle="false" />
+                    <shuffle-btn :shuffle="false" />
                   </v-col>
 
                   <v-col class="text-right">
-                    <VolumeBtn :value="0" />
-                    <QueueBtn />
+                    <volume-btn :value="0" />
+                    <queue-btn />
                   </v-col>
                 </v-row>
               </v-list-item>
@@ -55,17 +71,32 @@
   </v-card>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
+import LoopBtn from './LoopBtn.vue'
+import PlayPauseBtn from './PlayPauseBtn.vue'
+import PreviousBtn from './PreviousBtn.vue'
+import QueueBtn from './QueueBtn.vue'
+import ShuffleBtn from './ShuffleBtn.vue'
+import SkipBtn from './SkipBtn.vue'
+import VolumeBtn from './VolumeBtn.vue'
 
-export default Vue.extend({
+export default {
+  components: {
+    LoopBtn,
+    PreviousBtn,
+    PlayPauseBtn,
+    SkipBtn,
+    VolumeBtn,
+    QueueBtn,
+    ShuffleBtn,
+  },
   name: 'Player',
   data() {
     return {
       sheet: true,
     }
   },
-})
+}
 </script>
 
 <style scoped>
@@ -159,6 +190,10 @@ export default Vue.extend({
   height: 100%;
 }
 
+.v-list-item.theme--light {
+  padding-bottom: 16px;
+}
+
 .v-list-item__icon {
   margin: 0px 0;
   margin-right: 0px !important;
@@ -171,5 +206,15 @@ export default Vue.extend({
 
 #playerBar {
   z-index: 250 !important;
+}
+
+.titlePlayer {
+  width: 150px;
+  max-width: 100%;
+}
+
+.artistPlayer {
+  width: 150px;
+  max-width: 100%;
 }
 </style>
