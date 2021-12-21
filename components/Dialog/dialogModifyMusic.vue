@@ -1,11 +1,9 @@
 <template>
-  <v-dialog v-model="dialog" width="550">
-    <template v-slot:activator="{ on, attrs }">
-      <v-btn color="red lighten-2" dark v-bind="attrs" v-on="on">
-        Click Me
-      </v-btn>
-    </template>
-
+  <v-dialog
+    v-model="dialog"
+    width="550"
+    @click:outside="$emit('clicked', false)"
+  >
     <v-card tile>
       <v-card-title> Modifier les informations du titre </v-card-title>
 
@@ -62,10 +60,14 @@
 
 <script>
 export default {
-  data() {
-    return {
-      dialog: false,
-    }
+  name: 'dialogModifyMusic',
+
+  props: {
+    dialog: {
+      type: Boolean,
+      require: true,
+      default: false,
+    },
   },
 }
 </script>

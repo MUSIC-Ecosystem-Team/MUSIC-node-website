@@ -20,10 +20,5 @@
 </template>
 
 <script>
-import CardAvatar from '~/components/cardAvatar.vue'
-import cardMusic from '~/components/cardMusic.vue'
-
-export default {
-  components: { cardMusic, CardAvatar },
-}
+export default {}
 </script>

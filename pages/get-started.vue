@@ -2,7 +2,7 @@
   <v-container fluid fill-height class="container fill-height">
     <v-row align="center" justify="center">
       <v-col class="colFlex">
-        <v-stepper v-model="e1">
+        <v-stepper v-model="e1" tile>
           <v-stepper-header>
             <v-stepper-step :complete="e1 > 1" step="1">
               Création du compte
@@ -19,6 +19,8 @@
             <v-stepper-step step="3">
               Ajout de vos premières musiques
             </v-stepper-step>
+            <v-divider></v-divider>
+            <v-stepper-step step="4"> Configurer votre serveur </v-stepper-step>
           </v-stepper-header>
 
           <v-stepper-items>
@@ -36,8 +38,6 @@
               </v-card>
 
               <v-btn color="primary" @click="e1 = 2"> Continuer </v-btn>
-
-              <v-btn text> Revenir en arrière </v-btn>
             </v-stepper-content>
 
             <v-stepper-content step="2">
@@ -67,13 +67,18 @@
 
               <v-btn color="primary" @click="e1 = 3"> Continuer </v-btn>
 
-              <v-btn text> Revenir en arrière </v-btn>
+              <v-btn text @click="e1 = 1"> Revenir en arrière </v-btn>
             </v-stepper-content>
 
             <v-stepper-content step="3">
+              <v-btn color="primary" @click="e1 = 4"> Continuer </v-btn>
+
+              <v-btn text @click="e1 = 2"> Revenir en arrière </v-btn>
+            </v-stepper-content>
+            <v-stepper-content step="4">
               <v-btn color="primary" @click="e1 = 1"> Continuer </v-btn>
 
-              <v-btn text> Revenir en arrière </v-btn>
+              <v-btn text @click="e1 = 3"> Revenir en arrière </v-btn>
             </v-stepper-content>
           </v-stepper-items>
         </v-stepper>

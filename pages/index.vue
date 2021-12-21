@@ -8,7 +8,7 @@
     </h1>
     <v-row>
       <v-col v-for="n in 10" :key="n" xs="7" sm="4" lg="2" md="3">
-        <card-music :music_info="{}"></card-music>
+        <card-music-menu :music_info="{}"></card-music-menu>
       </v-col>
     </v-row>
     <dialog-modify-album />
@@ -17,8 +17,5 @@
 </template>
 
 <script>
-import dialogModifyMusic from '~/components/dialogModifyMusic.vue'
-export default {
-  components: { dialogModifyMusic },
-}
+export default {}
 </script>

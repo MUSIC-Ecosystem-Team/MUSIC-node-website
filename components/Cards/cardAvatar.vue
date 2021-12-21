@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'CardMusic',
+  name: 'cardAvatar',
 
   props: {
     music_info: {

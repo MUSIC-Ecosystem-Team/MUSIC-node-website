@@ -1,7 +1,17 @@
 <template>
-  <v-navigation-drawer v-model="show" fixed temporary app @input="changeDrawer">
+  <v-navigation-drawer
+    v-model="show"
+    permanent
+    :mini-variant.sync="show"
+    app
+    @input="changeDrawer(false)"
+  >
     <v-list-item>
-      <v-list-item-content class="text-center" style="margin-top: 10px">
+      <v-list-item-content
+        v-if="!show"
+        class="text-center"
+        style="margin-top: 10px"
+      >
         <v-list-item-title class="title">{{ title }}</v-list-item-title>
       </v-list-item-content>
     </v-list-item>
